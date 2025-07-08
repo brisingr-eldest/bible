@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="background">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="background.js"></script>
+        <script defer src="streak.js"></script>
+        <script defer src="bible.js"></script>
+        <script defer src="greeting.js"></script>
+    </head>
+    <body>
+        <h1 id="heading">My Dashboard</h1>
+
+        <div id="content-wrapper">
+
+            <section id="bibleReadingStreak" class="dashboard-section">
+                <h2 class="no-margin-no-padding">Bible Reading Streak</h2>
+                <p id="current-streak-label">Current Streak:</p>
+                <span id="streak-count">0</span>
+                <p id="longest-streak-label">&nbsp;Longest Streak: <span id="streak-longest">0</span></p>
+                <button id="mark-read">Mark Today</button>
+                <p id="streak-message"></p>
+                <div id="cal-section">
+                    <div id="history-heading-bar">
+                        <h3 style="margin: 0 auto; padding: 0;">History</h3>
+                        <button id="clear-history-button" class="hidden">Clear History</button>
+                    </div>
+                    <div id="cal-header">
+                        <button id="prev-month" class="month-nav">&lt;</button>
+                        <span id="month-label">May 2025</span>
+                        <button id="next-month" class="month-nav">&gt;</button>
+                        <button id="today-button">Today</button>
+                    </div>
+
+                    <!-- Day of the week headings-->
+                    <div id="cal-grid">
+                        <div class="cal-label">Sun</div><div class="cal-label">Mon</div><div class="cal-label">Tue</div><div class="cal-label">Wed</div><div class="cal-label">Thu</div><div class="cal-label">Fri</div><div class="cal-label">Sat</div>
+                    </div>
+                </div>
+                <button id="collapse-cal">&#x02C4;</button>
+            </section>
+
+            <section id="dailyBibleReading" class="dashboard-section">
+                <div id="reading-heading-wrapper">
+                    <button id="prev-page" class="reading-nav">&lt;</button>
+                    <h2 class="no-margin-no-padding">Daily Bible Reading</h2>
+                    <button id="next-page" class="reading-nav">&gt;</button>
+                </div>
+                <div id="reading-wrapper">
+                    <div id="ot" class="reading-page active"></div>
+                    <div id="nt" class="reading-page"></div>
+                    <div id="wis" class="reading-page"></div>
+                </div>
+                <div id="reading-settings-show-hide-wrapper" class="hidden no-margin-no-padding show-hide">
+                    <div id="reading-settings-wrapper">
+                        <div id="plan-select-wrapper">
+                            <label for="reading-plan">Plan:</label>
+                            <select id="reading-plan">
+                                <option>Classic Plan</option>
+                            </select>
+                        </div>
+
+                        <div id="date-select-wrapper">
+                            <label for="plan-start-date">Start Date:</label>
+                            <input type="date" id="plan-start-date" />
+                        </div>
+                    </div>
+                </div>
+                <button id="collapse-reading">&#x02C4;</button>
+            </section>
+
+        </div>
+
+    </body>
+</html>
